@@ -1,0 +1,64 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background-color: #fff;
+
+  min-height: 10rem;
+  max-width: 30rem;
+  padding: 1rem;
+  margin: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+.actionContainer {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.actionButton {
+  border: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.actionButton > span {
+  display: none;
+}
+
+.actionButton:hover > span, .actionButton:focus > span {
+  display: inline-block;
+  font-size: 0.625rem;
+  margin-left: 1ch;
+}
+
+.warnActionButton {
+  color: red;
+  border: none;
+  font-weight: normal;
+}
+
+.warnActionButton:hover {
+  text-decoration: underline;
+}
