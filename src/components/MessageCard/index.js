@@ -1,34 +1,34 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   container,
   content,
   title,
   actionContainer,
   actionButton,
-  warnActionButton
-} from './style.module.css';
+  warnActionButton,
+} from "./style.module.css";
 
 export default function MessageCard() {
   const [count, setCount] = useState(0);
-  const addCount = () => setCount(prev => prev + 1);
+  const addCount = () => setCount((prev) => prev + 1);
 
   const texts = [
     {
-      title: 'Bruna, eu te amo muitooo!',
-      success: 'Você é meu amorzinho',
-      good: 'Também te amo',
-      bad: 'Sinto algo diferente...',
+      title: "Bruna, eu te amo muitooo!",
+      success: "Você é meu amorzinho",
+      good: "Também te amo",
+      bad: "Sinto algo diferente...",
     },
     {
-      title: 'Puts... mas eu te acho bem legal 🥲',
-      success: 'Então continua sendo meu bb',
-      good: 'Eu gosto muito de você',
-      bad: 'Acho que não é isso...',
+      title: "Puts... mas eu te acho bem legal 🥲",
+      success: "Então continua sendo meu bb",
+      good: "Eu gosto muito de você",
+      bad: "Acho que não é isso...",
     },
     {
-      title: 'Achou que ia escapar? Vaii admite que me amaaa',
-      success: 'Você é chata, mas te amo do seu jeitinho',
-      good: 'É verdade, eu te amo',
+      title: "Achou que ia escapar? Vaii admite que me amaaa",
+      success: "Você é chata, mas te amo do seu jeitinho",
+      good: "É verdade, eu te amo",
     },
   ];
 
@@ -43,12 +43,14 @@ export default function MessageCard() {
             <button
               onClick={addCount}
               className={`${actionButton} ${warnActionButton}`}
-            >{texts[count].bad}</button>
+            >
+              {texts[count].bad}
+            </button>
           )}
-          <button
-            onClick={showResponse}
-            className={actionButton}
-          >{texts[count].good}<span>🥰</span></button>
+          <button onClick={showResponse} className={actionButton}>
+            {texts[count].good}
+            <span>🥰</span>
+          </button>
         </div>
       </div>
     </main>

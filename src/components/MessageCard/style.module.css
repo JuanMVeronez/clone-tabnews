@@ -47,7 +47,8 @@
   display: none;
 }
 
-.actionButton:hover > span, .actionButton:focus > span {
+.actionButton:hover > span,
+.actionButton:focus > span {
   display: inline-block;
   font-size: 0.625rem;
   margin-left: 1ch;
